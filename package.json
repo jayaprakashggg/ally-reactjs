@@ -1,0 +1,102 @@
+{
+  "name": "ally-react-js",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ally - React.js",
+  "main": "index.js",
+  "scripts": {
+    "clean:dev": "rimraf dist-dev",
+    "clean:prod": "rimraf dist-prod",
+    "pretest:dev": "npm run lint",
+    "test:dev": "cross-env BUILD=development jest --config=jest.config.js",
+    "test:prod": "cross-env BUILD=production jest --config=jest.config.js",
+    "snapshot:update": "jest --config=jest.config.js -u",
+    "start": "cross-env BUILD=local webpack-dev-server --mode development",
+    "build:dev": "npm run clean:dev && cross-env BUILD=development webpack --mode production",
+    "build:prod": "npm run clean:prod && cross-env BUILD=production webpack --mode production",
+    "lint-init": "eslint --init",
+    "lint": "eslint --ext .ts,.tsx ./src/ ",
+    "lint-fix": "eslint --ext .ts,.tsx ./src/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/rs-backoffice-StoreFrontEnd"
+  },
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/SetupTests.js"
+    ]
+  },
+  "dependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "core-js": "^3.3.2",
+    "react": "^16.9.0",
+    "react-collapsible": "^2.7.0",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "retry": "^0.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/enzyme": "^3.10.3",
+    "@types/jest": "^24.0.18",
+    "@typescript-eslint/parser": "^2.4.0",
+    "axios-mock-adapter": "^1.17.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "compression-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.0",
+    "eslint": "^6.2.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eventsourcemock": "^2.0.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.5",
+    "identity-obj-proxy": "^3.0.0",
+    "image-webpack-loader": "^5.0.0",
+    "jest": "^24.9.0",
+    "jest-junit": "^8.0.0",
+    "jest-webpack-resolver": "^0.3.0",
+    "nock": "^11.3.5",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.18.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3",
+    "url-loader": "^2.1.0",
+    "waait": "^1.0.5",
+    "webpack": "^4.39.3",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

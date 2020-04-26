@@ -1,0 +1,45 @@
+.cus-header {
+  padding: 10px;
+  color: white;
+  background: linear-gradient(45deg, #d39e00, transparent);
+}
+.m-t-20 {
+  margin-top: 20px;
+}
+.m-t-b {
+  margin: 10px 0;
+}
+.m-l-r-20 {
+  margin: 0 20px;
+}
+.w-100 {
+  width: 100%;
+}
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+.panel {
+  height: 100%;
+}
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+table td {
+  border: 1px solid #ccc;
+}
+table .absorbing-column {
+  width: 100%;
+}
+.gray {
+  color: darkgray;
+}
+.red {
+  color: red;
+}
